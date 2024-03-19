@@ -80,3 +80,17 @@ footer{
 footer h6{
   margin: 0 15px;
 }
+
+.degrees-table td{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 35%;
+}
+.degrees-table td p{
+  margin-bottom: 0;
+}
+
+.degrees-table td button{
+  margin-left: 30px;
+}

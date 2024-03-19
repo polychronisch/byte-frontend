@@ -1,7 +1,8 @@
 import { useState,useEffect } from "react";
-import { Stack,Table } from "react-bootstrap"
+import { Button, Stack,Table } from "react-bootstrap"
 export default function Degrees(){
     const [degrees,setDegrees] = useState([])
+    const [degreesUsed,setDegreesUsed] = useState([])
     useEffect(() => {
         const fetchData = async () => {
             try {
@@ -10,7 +11,8 @@ export default function Degrees(){
                 throw new Error('Network response was not ok');
                 }
                 const data = await response.json();
-                setDegrees(data);
+                setDegrees(data.degrees);
+                setDegreesUsed(data.degrees_used)
             } catch (error) {
                 console.error('Error fetching data:', error);
             }
@@ -19,7 +21,7 @@ export default function Degrees(){
     }, []); 
     return(
         <Stack>
-            <Table>
+            <Table className="degrees-table">
                 <thead>
                     <tr>
                         <th>Degree Name</th>
@@ -29,7 +31,12 @@ export default function Degrees(){
                     {degrees.map((degree)=>{
                         return(
                             <tr>
-                                <td>{degree.degreeTitle}</td>
+                                <td> 
+                                    <p>{degree.degreeTitle}</p>
+                                    {!degreesUsed.some(item => item.degree_id === degree.id) && ( 
+                                        <Button variant='danger'>Delete</Button>
+                                    )}
+                                </td>
                             </tr>
                         )
                         
