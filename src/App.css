@@ -1,0 +1,82 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+header{
+  background-color: #0087cc;
+  color: #fff;
+  font-weight: 800;
+  letter-spacing: 1.32px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main{
+  margin-top: 25px;
+  height: calc(100vh - 150px);
+}
+
+.byte-button{
+  background-color: #0087cc;
+  color: #fff;
+  border-radius: 0;
+  letter-spacing: 1.2px;
+}
+
+.job-options-area{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  row-gap: 10px;
+}
+
+footer{
+  height: 50px;
+  background-color: #fff;
+  color: #0087cc;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-top: thin solid #0087cc;
+  height: 55px;
+}
+
+footer h6{
+  margin: 0 15px;
+}
