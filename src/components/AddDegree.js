@@ -16,11 +16,8 @@ export default function AddDegree(){
         e.preventDefault();
         try {
             const response = await axios.post('http://localhost:8000/api/submit-degree', formData);
-            console.log(response);
-            // Optionally, you can handle success response here
         } catch (error) {
-            // console.error(error.response.data);
-            // Optionally, you can handle error response here
+            // handle error response here
         }
     };
     return(

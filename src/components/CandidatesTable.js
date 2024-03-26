@@ -9,11 +9,9 @@ export default function CandidatesTable(){
     const deleteCandidate = async(id)=>{
         try {
             const response = await axios.post('http://localhost:8000/api/delete-candidate/'+id);
-            console.log(response);
-            // Optionally, you can handle success response here
+            
         } catch (error) {
-            // console.error(error.response.data);
-            // Optionally, you can handle error response here
+            // handle error response here
         }
     }
     const showCandidate = (id) => {

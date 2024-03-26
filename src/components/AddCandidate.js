@@ -37,11 +37,8 @@ export default function AddCandidate(){
         e.preventDefault();
         try {
             const response = await axios.post('http://localhost:8000/api/submit-candidate', formData);
-            console.log(response);
-            // Optionally, you can handle success response here
         } catch (error) {
-            // console.error(error.response.data);
-            // Optionally, you can handle error response here
+            // handle error response here
         }
     };
 
